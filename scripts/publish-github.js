@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Script to publish to GitHub Packages
+ * Run this script to publish to GitHub Packages
  * Temporarily scopes the package name for GitHub Packages
  */
 
