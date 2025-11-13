@@ -1,3 +1,4 @@
+#Remember to update tokens
 name: Publish to GitHub Packages
 
 on:
