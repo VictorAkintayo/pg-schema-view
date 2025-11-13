@@ -1,3 +1,4 @@
+//This provide a guide on how db connection should work
 import { Client } from 'pg';
 import { Logger } from '../utils/logger.js';
 
