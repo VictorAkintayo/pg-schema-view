@@ -1,0 +1,47 @@
+{
+  "name": "@victorakintayo/pg-schema-view",
+  "version": "1.1.2",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "description": "A CLI tool for exploring PostgreSQL database schemas with pretty console output, Markdown, JSON, and Mermaid ER diagrams",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "pg-schema-view": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VictorAkintayo/pg-schema-view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VictorAkintayo/pg-schema-view/issues"
+  },
+  "homepage": "https://github.com/VictorAkintayo/pg-schema-view#readme",
+  "keywords": [
+    "postgresql",
+    "schema",
+    "database",
+    "cli",
+    "introspection",
+    "erd",
+    "mermaid"
+  ],
+  "author": "Victor Akintayo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

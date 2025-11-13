@@ -25,7 +25,9 @@
     "prepublishOnly": "npm run build && npm test",
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish",
-    "publish:major": "npm version major && npm publish"
+    "publish:major": "npm version major && npm publish",
+    "publish:github": "node scripts/publish-github.js",
+    "publish:both": "npm publish && npm run publish:github"
   },
   "keywords": [
     "postgresql",

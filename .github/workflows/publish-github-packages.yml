@@ -1,0 +1,42 @@
+name: Publish to GitHub Packages
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  publish-github:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@victorakintayo'
+      
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      
+      - name: Update package-github.json version
+        run: |
+          node -e "
+          const fs = require('fs');
+          const pkg = JSON.parse(fs.readFileSync('package.json'));
+          const pkgGithub = JSON.parse(fs.readFileSync('package-github.json'));
+          pkgGithub.version = pkg.version;
+          fs.writeFileSync('package-github.json', JSON.stringify(pkgGithub, null, 2) + '\n');
+          "
+      
+      - name: Publish to GitHub Packages
+        run: npm run publish:github
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
