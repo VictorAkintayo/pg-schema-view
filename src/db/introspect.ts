@@ -1,3 +1,4 @@
+// SQL queries for database connection
 import { Client } from 'pg';
 import { Logger } from '../utils/logger.js';
 
