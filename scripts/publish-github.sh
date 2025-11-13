@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to publish to GitHub Packages
+# Run this script to publish to GitHub Packages
 # Usage: ./scripts/publish-github.sh
 
 set -e
