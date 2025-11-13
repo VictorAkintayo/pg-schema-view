@@ -38,6 +38,14 @@
   ],
   "author": "Victor Akintayo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VictorAkintayo/pg-schema-view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VictorAkintayo/pg-schema-view/issues"
+  },
+  "homepage": "https://github.com/VictorAkintayo/pg-schema-view#readme",
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^11.1.0",
