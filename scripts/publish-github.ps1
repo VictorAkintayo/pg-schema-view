@@ -1,4 +1,4 @@
-# PowerShell script to publish to GitHub Packages
+# Run this PowerShell script to publish to GitHub Packages
 # Usage: .\scripts\publish-github.ps1
 
 Write-Host "📦 Publishing to GitHub Packages..." -ForegroundColor Cyan
