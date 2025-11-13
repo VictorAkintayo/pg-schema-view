@@ -465,4 +465,3 @@ If foreign keys or constraints are not showing:
 - Config file support
 - Table filtering options
 - Environment variable support
-
